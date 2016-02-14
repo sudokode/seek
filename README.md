@@ -25,6 +25,8 @@ By default, this uses `grep` to search, so anything `grep` can do, `locate` can 
 Updating
 --------
 
+`seek` will attempt to run `updatedb` if it cannot find the index.
+
 Since updating is a very inexpensive process, it's easily done with cron, which also makes it easy to determine which user's index is to be updated automatically.
 
 Run:  
