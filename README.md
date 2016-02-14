@@ -18,6 +18,6 @@ Usage
 -----
 
 - `updatedb` - Updates the index for the current user
-- `locate <search>` - Searches for filenames containing <search>
+- `locate <search>` - Searches for filenames containing \<search>
 
 By default, this uses `grep` to search, so anything `grep` can do, `locate` can do as well. All arguments to `locate` are passed to the search tool.
