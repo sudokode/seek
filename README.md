@@ -27,10 +27,10 @@ Updating
 
 Since updating is a very inexpensive process, it's easily done with cron, which also makes it easy to determine which user's index is to be updated automatically.
 
-Run:
+Run:  
 `crontab -e`
 
-Enter:
+Enter:  
 `42 * * * * updatedb`
 
 That will update the user's index every hour (42 minutes past).
