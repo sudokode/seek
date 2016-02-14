@@ -4,4 +4,8 @@ index="/tmp/index-$UID/index"
 decomp_tool="lz4 -d"
 search_tool="grep"
 
+if [ ! -f "$index" ]; then
+  updatedb
+fi
+
 $decomp_tool "$index" 2>/dev/null | $search_tool "$@"
