@@ -40,7 +40,7 @@ Size: 33MiB
 Time: 0.568
 
 seek:  
-`time locate '\.desktop$'`  
+`locate '\.desktop$'`  
 Size: 9.8MiB  
 Time: 0.331
 
