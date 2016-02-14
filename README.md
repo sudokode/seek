@@ -13,3 +13,11 @@ Dependencies
 - findutils (could use something else for this :D )
 - grep (default search tool)
 - lz4 (default compression tool)
+
+Usage
+=====
+
+`updatedb` - Updates the index for the current user
+`locate <search>` - Searches for filenames containing <search>
+
+By default, this uses `grep` to search, so anything `grep` can do, `locate` can do as well. All arguments to `locate` are passed to the search tool.
