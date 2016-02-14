@@ -22,6 +22,19 @@ Usage
 
 By default, this uses `grep` to search, so anything `grep` can do, `locate` can do as well. All arguments to `locate` are passed to the search tool.
 
+Updating
+--------
+
+Since updating is a very inexpensive process, it's easily done with cron, which also makes it easy to determine which user's index is to be updated automatically.
+
+Run:
+`crontab -e`
+
+Enter:
+`42 * * * * updatedb`
+
+That will update the user's index every hour (42 minutes past).
+
 Reasoning
 ---------
 
