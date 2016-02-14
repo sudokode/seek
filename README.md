@@ -81,3 +81,5 @@ Caveats
 - With more than a few users, using one index per user makes the size required more than `mlocate`, but this could be remedied with a global index. The problem there is `mlocate` honors permissions, while `seek` relies on each index containing only what the user would be allowed to view with `find`. This is a design choice in the end.
 
 - Some cute features of `locate` are missing, like `--basename`. That could possibly be handled with regex.
+
+- `locate` is actually slightly faster than `seek` when updating the index, but when you consider the index is bigger, `locate` is slower at searching, and `seek` is more robust since it just uses `grep`, the difference is rather neglible.
