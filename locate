@@ -2,6 +2,6 @@
 
 index="/tmp/index-$UID/index"
 decomp_tool="lz4 -d"
-search_tool="grep -i"
+search_tool="grep"
 
 $decomp_tool "$index" 2>/dev/null | $search_tool "$@"
