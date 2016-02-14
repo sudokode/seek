@@ -45,7 +45,7 @@ I've always thought `locate` was rather useless.
 **Size and speed**:
 
 find:  
-`find / -iname '*.desktop' 2>/dev/null`  
+`find / -name '*.desktop' 2>/dev/null`  
 Size: 0MiB  
 Time: 2.869
 
@@ -68,11 +68,11 @@ find:
 Results: *none*
 
 mlocate:  
-`locate -r 'p(or|r0)n$'`  
+`locate -ir 'p(or|r0)n$'`  
 Results: *none*
 
 seek:  
-`locate -E 'p(or|r0)n$'`  
+`locate -iE 'p(or|r0)n$'`  
 Results: `/home/zoidberg/lobsterpr0n`
 
 Caveats
