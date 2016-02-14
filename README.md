@@ -54,8 +54,8 @@ mlocate:
 `locate -r 'p(or|r0)n$'`  
 Results: *none*
 
-seek:
-`locate -E 'p(or|r0)n$'`
+seek:  
+`locate -E 'p(or|r0)n$'`  
 Results: `/home/zoidberg/lobsterpr0n`
 
 Caveats
