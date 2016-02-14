@@ -1,0 +1,7 @@
+#!/bin/sh
+
+index="/tmp/index-$UID/index"
+decomp_tool="lz4 -d"
+search_tool="grep -i"
+
+$decomp_tool "$index" 2>/dev/null | $search_tool "$@"

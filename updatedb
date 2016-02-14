@@ -1,0 +1,25 @@
+#!/bin/sh
+
+index_dir="/tmp/index-$UID"
+index="$index_dir/index"
+
+perms_dir=700
+perms_index=600
+
+comp_tool="lz4 -9"
+
+if [ ! -d "$index_dir" ]; then
+  mkdir "$index_dir"
+  chmod $perms_dir "$index_dir"
+fi
+
+find / 2>/dev/null | tee "${index}.tmp" &>/dev/null
+
+chmod $perms_index "${index}.tmp"
+
+$comp_tool "${index}.tmp" "${index}.tmp.comp" &>/dev/null
+
+# hopefully moving it at the end will cause less interference :)
+mv "${index}.tmp.comp" "$index"
+
+rm "${index}.tmp"
