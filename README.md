@@ -59,6 +59,8 @@ seek:
 Size: 9.8MiB  
 Time: 0.331
 
+*(Size refers to the index file, not the memory used.)*
+
 **Accuracy**:
 
 find:  
