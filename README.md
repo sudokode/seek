@@ -29,29 +29,29 @@ I've always thought `locate` was rather useless.
 
 **Size and speed**:
 
-find:
-`find / -iname '*.desktop' 2>/dev/null`
-Size: 0MiB
-Time: 2.869s
+find:  
+`find / -iname '*.desktop' 2>/dev/null`  
+Size: 0MiB  
+Time: 2.869
 
-mlocate:
-`locate *.desktop`
-Size: 33MiB
-Time: 0.568s
+mlocate:  
+`locate *.desktop`  
+Size: 33MiB  
+Time: 0.568
 
-seek:
-`time locate '\.desktop$'`
-Size: 9.8MiB
-Time: 0.331s
+seek:  
+`time locate '\.desktop$'`  
+Size: 9.8MiB  
+Time: 0.331
 
 **Accuracy**:
 
-find:
-`find / -iregex 'p(or|r0)n$' 2>/dev/null`
+find:  
+`find / -iregex 'p(or|r0)n$' 2>/dev/null`  
 Results: *none*
 
-mlocate:
-`locate -r 'p(or|r0)n$'`
+mlocate:  
+`locate -r 'p(or|r0)n$'`  
 Results: *none*
 
 seek:
