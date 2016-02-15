@@ -75,6 +75,10 @@ seek:
 `locate -iE 'p(or|r0)n$'`  
 Results: `/home/zoidberg/lobsterpr0n`
 
+So why is `locate` a thing? It seems like it was designed for an earlier time, but doesn't really meet its goal even for then. It has a large disk footprint, isn't stored in a tmpfs by default, is slow at searching, doesn't support extended regex (or any others), and always seems like just another thing a sysadmin has to set up. `find` works just fine, but if you wanna do regex with it, it might be best to use `-exec grep -E /foo/ {} \;`.
+
+Or if you prefer a very simple `locate` that doesn't get in the way, let the user handle it by adding `updatedb` to their cron without worrying about permissions. If they wanna modify how it works, they can copy it to their home. It's just a shell script, and the index is just a simple compressed text file.
+
 Caveats
 -------
 
