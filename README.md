@@ -12,11 +12,11 @@ Dependencies
 - coreutils
 - findutils (could use something else for this :D )
 - grep (default search tool)
-- lz4 (default compression tool)
+- zstd (default compression tool)
 
 `grep` is very robust as search tool. `awk` might also be an interesting choice. There is currently no way to override these except by modifying.
 
-`lz4` seems to be the best choice for this sort of fast, on-demand compression. The decompression time is just untouchable. The problem with these not being overridable is that you have to change both files for the the compression tool. Usually to add a decompress flag, but that's not always true... I still prefer the idea of having the option there; flags can easily be added. This thing just needs to listen to some environment variables.
+`zstd` seems to be the best choice for this sort of fast, on-demand compression. The decompression time is just untouchable. The problem with these not being overridable is that you have to change both files for the the compression tool. Usually to add a decompress flag, but that's not always true... I still prefer the idea of having the option there; flags can easily be added. This thing just needs to listen to some environment variables. Beware of suppressing `lz4` or `zstd` stdout. It breaks the output.
 
 Usage
 -----

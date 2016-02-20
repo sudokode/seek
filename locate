@@ -1,7 +1,7 @@
 #!/bin/sh
 
 index="/tmp/index-$UID/index"
-decomp_tool="lz4 -d"
+decomp_tool="zstd -d"
 search_tool="grep"
 
 if [ ! -f "$index" ]; then

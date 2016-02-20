@@ -6,8 +6,8 @@ index="$index_dir/index"
 perms_dir=700
 perms_index=600
 
-comp_tool="lz4 -9"
-comp_suffix="lz4"
+comp_tool="zstd"
+comp_suffix="zst"
 
 if [ ! -d "$index_dir" ]; then
   mkdir "$index_dir"
@@ -18,7 +18,7 @@ find / 2>/dev/null | tee "${index}.tmp" &>/dev/null
 
 chmod $perms_index "${index}.tmp"
 
-$comp_tool "${index}.tmp" &>/dev/null
+$comp_tool "${index}.tmp" 2>/dev/null
 
 # hopefully moving it at the end will cause less interference :)
 mv "${index}.tmp.${comp_suffix}" "$index"
